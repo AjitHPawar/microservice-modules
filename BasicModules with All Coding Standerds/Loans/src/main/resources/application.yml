@@ -1,0 +1,21 @@
+# H2 database and hibernate props
+spring:
+  datasource:
+    url: jdbc:h2:mem:loans
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Add logging related props
+logging:
+  level:
+    org.springframework: INFO
+    com.accounts: debug
+

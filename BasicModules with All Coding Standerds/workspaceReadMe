@@ -1,0 +1,27 @@
+Steps to create mircoservice ready spring boot applications.
+
+1. Create a maven project in intellij idea.
+2. Add the following dependencies in the pom.xml file.
+
+    * **spring-boot-starter-validation**
+    * **spring-boot-starter-web**
+    * **lombok**
+    * **spring-boot-starter-actuator**
+    * **spring-boot-starter-data-jpa**
+    * **spring-boot-devtools**
+    * **h2**
+    * **spring-boot-starter-test**
+
+3. Create a src/main/resources folder and add the following files.
+    application.properties
+    application.yml
+    data.sql
+    schema.sql
+
+4. Create a src/main/java folder and add the following files.
+    Which is package of your application.
+    MainApplication.java
+
+5. Create documentation using springdoc-openapi-starter-webmvc-ui
+   on each layer of the application.
+

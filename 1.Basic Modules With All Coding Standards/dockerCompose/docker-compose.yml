@@ -1,0 +1,52 @@
+services:
+  accounts:
+    image: "javacloudlover/accounts:s4"
+    container_name: bank-accounts
+    ports:
+      - "8081:8081"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    networks:
+      - bank-network
+
+  cards:
+    image: "javacloudlover/cards:s4"
+    container_name: bank-cards
+    ports:
+      - "8082:8082"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    networks:
+      - bank-network
+
+  loans:
+    image: "javacloudlover/loans:s4"
+    container_name: bank-loans
+    ports:
+      - "8083:8083"
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    networks:
+      - bank-network
+
+networks:
+  bank-network:
+    driver: bridge
